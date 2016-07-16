@@ -15,7 +15,7 @@ There is no authentication required at this point.
 ##### API Request Format
 Thailand Open API request takes the following form:
 
-https://api.openthailand.org/<b>resource<b>?<b>parameters</b>
+https://api.openthailand.org/<b>resource</b>?<b>parameters</b>
 
 Required and optional parameters will be described in each endpoint if any.
 
