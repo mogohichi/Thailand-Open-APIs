@@ -1,5 +1,5 @@
 # Introduction
-The Thailand Open APIs is created by Apisit Toompakdee aiming to provide a better way to access Thailand Open Data.
+The Thailand Open APIs was created aiming to provide a better way to access Thailand Open Data.
 
 
 ##### API Endpoint
