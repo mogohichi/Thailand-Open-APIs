@@ -15,7 +15,7 @@ There is no authentication required at this point.
 ##### API Request Format
 Thailand Open API request takes the following form:
 
-https://api.openthailand.org/__resource__?__parameters__
+https://api.openthailand.org/<b>resource<b>?<b>parameters</b>
 
 Required and optional parameters will be described in each endpoint if any.
 
@@ -69,13 +69,13 @@ Retrieve all provinces.
 - - -
 #### Get all districts in province
 Retrieve all districts(amphor) of given province.
-> GET https://api.openthailand.org/provinces/__{province_id}__/districts
+> GET https://api.openthailand.org/provinces/<b>{province_id}</b>/districts
 
-**Required parameters**
+**Required parameters**  
 `province_id` — id of province
 
 **Sample Request**
-> GET https://api.openthailand.org/provinces/__chonburi__/districts
+> GET https://api.openthailand.org/provinces/<b>chonburi</b>/districts
 
 **Sample JSON Response**
 ```js
@@ -105,14 +105,14 @@ Retrieve all districts(amphor) of given province.
 - - -
 #### Get all subdistricts in district in province
 Retrieve all subdistricts(tambon) of given district(amphor) in province.
-> GET https://api.openthailand.org/provinces/__{province_id}__/districts/__{district_id}__/subdistricts
+> GET https://api.openthailand.org/provinces/<b>{province_id}</b>/districts/<b>{district_id}</b>/subdistricts
 
-**Required parameters**
-`province_id` — id of province
+**Required parameters**  
+`province_id` — id of province  
 `district_id` — id of district
 
 **Sample Request**
-> GET https://api.openthailand.org/provinces/__chonburi__/districts/__1__/subdistricts
+> GET https://api.openthailand.org/provinces/<b>chonburi</b>/districts/<b>1</b>/subdistricts
 
 **Sample JSON Response**
 ```js
