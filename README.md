@@ -153,6 +153,6 @@ Retrieve all subdistricts(tambon) of given district(amphor) in province.
 }
 ```
 
-
+- - -
 ### Sponsored by
 Mogohichi, Inc.
