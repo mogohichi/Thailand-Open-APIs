@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Thailand-open-apis by apisit</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Thailand-open-apis</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/apisit/Thailand-Open-APIs">View the Project on GitHub <small>apisit/Thailand-Open-APIs</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/apisit/Thailand-Open-APIs/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/apisit/Thailand-Open-APIs/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/apisit/Thailand-Open-APIs">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h1>
+
+<p>The Thailand Open APIs was created aiming to provide a better way to access Thailand Open Data.</p>
+
+<h5>
+<a id="api-endpoint" class="anchor" href="#api-endpoint" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API Endpoint</h5>
+
+<p><a href="https://api.openthailand.org/">https://api.openthailand.org/</a></p>
+
+<h5>
+<a id="supported-methods" class="anchor" href="#supported-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Supported Methods</h5>
+
+<p>GET | POST | DELETE | PUT</p>
+
+<h5>
+<a id="authentication" class="anchor" href="#authentication" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authentication</h5>
+
+<p>There is no authentication required at this point.</p>
+
+<h5>
+<a id="api-request-format" class="anchor" href="#api-request-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>API Request Format</h5>
+
+<p>Thailand Open API request takes the following form:</p>
+
+<p><a href="https://api.openthailand.org/">https://api.openthailand.org/</a><b>resource</b>?<b>parameters</b></p>
+
+<p>Required and optional parameters will be described in each endpoint if any.</p>
+
+<h5>
+<a id="success-response-format" class="anchor" href="#success-response-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Success Response Format</h5>
+
+<div class="highlight highlight-source-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span>:<span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>result<span class="pl-pds">"</span></span>:{}
+}</pre></div>
+
+<h5>
+<a id="error-response-format" class="anchor" href="#error-response-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Error Response Format</h5>
+
+<div class="highlight highlight-source-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span>:<span class="pl-c1">400</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>error<span class="pl-pds">"</span></span>:{
+        <span class="pl-s"><span class="pl-pds">"</span>message<span class="pl-pds">"</span></span>:<span class="pl-s"><span class="pl-pds">"</span>BAD REQUEST<span class="pl-pds">"</span></span>
+    }
+}</pre></div>
+
+<h1>
+<a id="endpoints" class="anchor" href="#endpoints" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Endpoints</h1>
+
+<h4>
+<a id="get-all-thailand-provinces" class="anchor" href="#get-all-thailand-provinces" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get all Thailand provinces</h4>
+
+<p>Retrieve all provinces.</p>
+
+<blockquote>
+<p>GET <a href="https://api.openthailand.org/provinces">https://api.openthailand.org/provinces</a></p>
+</blockquote>
+
+<p><strong>Sample JSON Response</strong></p>
+
+<div class="highlight highlight-source-js"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>result<span class="pl-pds">"</span></span><span class="pl-k">:</span>{ 
+        <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span>[
+                {
+                    <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>chonburi<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Chonburi<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ชลบุรี<span class="pl-pds">"</span></span>
+                },
+                {
+                    <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>bangkok<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Bangkok<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>กรุงเทพฯ<span class="pl-pds">"</span></span>
+                }
+            ]
+        }
+}</pre></div>
+
+<hr>
+
+<h4>
+<a id="get-all-districts-in-province" class="anchor" href="#get-all-districts-in-province" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get all districts in province</h4>
+
+<p>Retrieve all districts(amphor) of given province.</p>
+
+<blockquote>
+<p>GET <a href="https://api.openthailand.org/provinces/">https://api.openthailand.org/provinces/</a><b>{province_id}</b>/districts</p>
+</blockquote>
+
+<p><strong>Required parameters</strong><br>
+<code>province_id</code> — id of province</p>
+
+<p><strong>Sample Request</strong></p>
+
+<blockquote>
+<p>GET <a href="https://api.openthailand.org/provinces/">https://api.openthailand.org/provinces/</a><b>chonburi</b>/districts</p>
+</blockquote>
+
+<p><strong>Sample JSON Response</strong></p>
+
+<div class="highlight highlight-source-js"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>result<span class="pl-pds">"</span></span><span class="pl-k">:</span>{ 
+        <span class="pl-s"><span class="pl-pds">"</span>province<span class="pl-pds">"</span></span><span class="pl-k">:</span>{
+            <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>chonburi<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Chonburi<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ชลบุรี<span class="pl-pds">"</span></span>
+        },
+        <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span>[
+                {
+                    <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Si Racha<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ศรีราชา<span class="pl-pds">"</span></span>
+                },
+                {
+                    <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Bang Sean<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>บางแสน<span class="pl-pds">"</span></span>
+                }
+            ]
+        }
+}</pre></div>
+
+<hr>
+
+<h4>
+<a id="get-all-subdistricts-in-district-in-province" class="anchor" href="#get-all-subdistricts-in-district-in-province" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get all subdistricts in district in province</h4>
+
+<p>Retrieve all subdistricts(tambon) of given district(amphor) in province.</p>
+
+<blockquote>
+<p>GET <a href="https://api.openthailand.org/provinces/">https://api.openthailand.org/provinces/</a><b>{province_id}</b>/districts/<b>{district_id}</b>/subdistricts</p>
+</blockquote>
+
+<p><strong>Required parameters</strong><br>
+<code>province_id</code> — id of province<br>
+<code>district_id</code> — id of district</p>
+
+<p><strong>Sample Request</strong></p>
+
+<blockquote>
+<p>GET <a href="https://api.openthailand.org/provinces/">https://api.openthailand.org/provinces/</a><b>chonburi</b>/districts/<b>1</b>/subdistricts</p>
+</blockquote>
+
+<p><strong>Sample JSON Response</strong></p>
+
+<div class="highlight highlight-source-js"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>result<span class="pl-pds">"</span></span><span class="pl-k">:</span>{ 
+        <span class="pl-s"><span class="pl-pds">"</span>province<span class="pl-pds">"</span></span><span class="pl-k">:</span>{
+            <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>chonburi<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Chonburi<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ชลบุรี<span class="pl-pds">"</span></span>
+        },
+        <span class="pl-s"><span class="pl-pds">"</span>district<span class="pl-pds">"</span></span><span class="pl-k">:</span>{
+            <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Sriracha<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ศรีราชา<span class="pl-pds">"</span></span>
+        },
+        <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span>[
+                {
+                    <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Si Racha<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ศรีราชา<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>location<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+                        <span class="pl-s"><span class="pl-pds">"</span>lat<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">13.162</span>,
+                        <span class="pl-s"><span class="pl-pds">"</span>lng<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">100.923</span>
+                    }
+                },
+                {
+                    <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Surasak<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>สุรศักดิ์<span class="pl-pds">"</span></span>,
+                    <span class="pl-s"><span class="pl-pds">"</span>location<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+                        <span class="pl-s"><span class="pl-pds">"</span>lat<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">13.160</span>,
+                        <span class="pl-s"><span class="pl-pds">"</span>lng<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">100.983</span>
+                    }
+                }
+            ]
+        }
+}</pre></div>
+
+<hr>
+
+<h4>
+<a id="get-closet-subdistrict-district-and-province-by-latlng" class="anchor" href="#get-closet-subdistrict-district-and-province-by-latlng" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get closet subdistrict, district and province by lat,lng</h4>
+
+<p>Find what subdistrict in given lat,lng</p>
+
+<blockquote>
+<p>GET <a href="https://api.openthailand.org/location/search?lat=">https://api.openthailand.org/location/search?lat=</a><b>{lat}</b>&amp;lng=<b>{lng}</b></p>
+</blockquote>
+
+<p><strong>Required parameters</strong><br>
+<code>lat</code> — latitude<br>
+<code>lng</code> — longitude</p>
+
+<p><strong>Sample Request</strong></p>
+
+<blockquote>
+<p>GET <a href="https://api.openthailand.org/location/search?lat=">https://api.openthailand.org/location/search?lat=</a><b>13.170</b>&amp;lng=<b>100.99</b></p>
+</blockquote>
+
+<p><strong>Sample JSON Response</strong></p>
+
+<div class="highlight highlight-source-js"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>code<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-c1">200</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>result<span class="pl-pds">"</span></span><span class="pl-k">:</span>{ 
+        <span class="pl-s"><span class="pl-pds">"</span>province<span class="pl-pds">"</span></span><span class="pl-k">:</span>{
+            <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>chonburi<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Chonburi<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ชลบุรี<span class="pl-pds">"</span></span>
+        },
+        <span class="pl-s"><span class="pl-pds">"</span>district<span class="pl-pds">"</span></span><span class="pl-k">:</span>{
+            <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Sriracha<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>ศรีราชา<span class="pl-pds">"</span></span>
+        },
+        <span class="pl-s"><span class="pl-pds">"</span>subdistrict<span class="pl-pds">"</span></span><span class="pl-k">:</span>{
+            <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>Surasak<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>name_th<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>สุรศักดิ์<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>location<span class="pl-pds">"</span></span><span class="pl-k">:</span> {
+                <span class="pl-s"><span class="pl-pds">"</span>lat<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">13.160</span>,
+                <span class="pl-s"><span class="pl-pds">"</span>lng<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">100.983</span>
+                }
+        }
+}</pre></div>
+
+<hr>
+
+<h3>
+<a id="sponsored-by" class="anchor" href="#sponsored-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sponsored by</h3>
+
+<p>Mogohichi, Inc.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/apisit">apisit</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
