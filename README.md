@@ -152,7 +152,44 @@ Retrieve all subdistricts(tambon) of given district(amphor) in province.
 		}
 }
 ```
+- - -
+#### Get closet subdistrict, district and province by lat,lng
+Find what subdistrict in given lat,lng
+> GET https://api.openthailand.org/location/search?lat=<b>{lat}</b>&lng=<b>{lng}</b>
 
+**Required parameters**  
+`lat` — latitude  
+`lng` — longitude
+
+**Sample Request**
+> GET https://api.openthailand.org/location/search?lat=<b>13.170</b>&lng=<b>100.99</b>
+
+**Sample JSON Response**
+```js
+{
+	"code":200,
+	"result":{ 
+		"province":{
+			"id":"chonburi",
+			"name":"Chonburi",
+			"name_th":"ชลบุรี"
+		},
+		"district":{
+			"id":"1",
+			"name":"Sriracha",
+			"name_th":"ศรีราชา"
+		},
+		"subdistrict":{
+			"id":"2",
+			"name":"Surasak",
+			"name_th":"สุรศักดิ์",
+			"location": {
+				"lat": 13.160,
+				"lng": 100.983
+				}
+		}
+}
+```
 - - -
 ### Sponsored by
 Mogohichi, Inc.
